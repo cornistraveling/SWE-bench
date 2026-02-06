@@ -170,3 +170,27 @@ cython_debug/
 data/repos/copies
 notebooks/
 *logs/
+
+# =========================
+# SWE-bench / A-B study
+# =========================
+
+# Experiment artifacts
+ab_spec_study/workspaces/
+ab_spec_study/runs/
+ab_spec_study/repo_cache/
+
+# Model outputs
+*.diff
+agent_log.txt
+spec_gen_log.txt
+fix_log.txt
+
+# LLM / HF cache
+.huggingface/
+.cache/
+
+# OS junk
+.DS_Store
+
+ab_spec_study/eval/
