@@ -51,7 +51,7 @@ def main():
         engine_dir = runs / args.engine / mode
         rows = build_predictions(engine_dir, args.engine, mode)
 
-        jsonl_path = out / f"{mode}_predictions.jsonl"
+        jsonl_path = out / f"{mode}_{args.engine}_predictions_all.jsonl"
         with jsonl_path.open("w", encoding="utf-8") as f:
             for r in rows:
                 f.write(json.dumps(r, ensure_ascii=False) + "\n")
