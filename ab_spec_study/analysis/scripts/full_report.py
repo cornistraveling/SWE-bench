@@ -23,7 +23,7 @@ Usage (called by run_full_pipeline.sh):
         --engine         claude \
         --eval_dir       ab_spec_study/eval \
         --out_dir        ab_spec_study \
-        --modes A B C D
+        --modes A B
 """
 
 import argparse
@@ -61,12 +61,13 @@ except ImportError:
 HAS_TEXTSTAT = False  # prose readability metrics removed (not suitable for code)
 
 # ─────────────────────────────────────────────────────────────────────────────
-MODES = ["A", "B", "C", "D"]
+MODES = ["A", "B"]  # C and D not yet run in this repo
+# MODES = ["A", "B", "C", "D"]  # uncomment when C/D runs are available
 MODE_LABELS = {
     "A": "No spec",
     "B": "Simple spec",
-    "C": "OpenSpec",
-    "D": "spec-kit",
+    # "C": "OpenSpec",   # not yet run in this repo
+    # "D": "spec-kit",   # not yet run in this repo
 }
 
 # ══════════════════════════════════════════════════════════════════════════════

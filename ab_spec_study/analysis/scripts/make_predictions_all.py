@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build SWE-bench predictions JSONL files for all modes (A, B, C, D).
+Build SWE-bench predictions JSONL files for all modes (A, B).
 
 Usage:
     python make_predictions_all.py \
@@ -13,7 +13,8 @@ import json
 from pathlib import Path
 
 
-MODES = ["A", "B", "C", "D"]
+MODES = ["A", "B"]  # C and D not yet run in this repo
+# MODES = ["A", "B", "C", "D"]  # uncomment when C/D runs are available
 
 
 def build_predictions(mode_dir: Path, engine: str, mode: str) -> list[dict]:
